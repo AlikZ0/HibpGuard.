@@ -1,4 +1,4 @@
-name: HibpGuard iOS
+name: HibpGuard iPhone IPA
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  build-and-test:
+  build-ipa:
     runs-on: macos-latest
     timeout-minutes: 30
 
@@ -19,16 +19,75 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Build and test in iPhone simulator
+      - name: Find Xcode project
+        id: project
         shell: bash
         run: |
           set -euo pipefail
 
-          if [ -f "Tools/test_on_simulator.sh" ]; then
-            bash Tools/test_on_simulator.sh
-          elif [ -f "HibpGuard/Tools/test_on_simulator.sh" ]; then
-            bash HibpGuard/Tools/test_on_simulator.sh
+          if [ -d "HibpGuard.xcodeproj" ]; then
+            hibp_project="HibpGuard.xcodeproj"
+          elif [ -d "HibpGuard/HibpGuard.xcodeproj" ]; then
+            hibp_project="HibpGuard/HibpGuard.xcodeproj"
           else
-            echo "::error::Upload the complete HibpGuard project, including Tools/test_on_simulator.sh."
+            echo "::error::HibpGuard.xcodeproj was not found. Upload the complete project."
             exit 1
           fi
+          printf 'path=%s\n' "$hibp_project" >> "$GITHUB_OUTPUT"
+
+      - name: Build unsigned app for a physical iPhone
+        shell: bash
+        env:
+          HIBP_PROJECT_PATH: ${{ steps.project.outputs.path }}
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          xcodebuild build \
+            -project "$HIBP_PROJECT_PATH" \
+            -scheme HibpGuard \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/HibpGuard-Device" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+
+      - name: Package unsigned IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+          hibp_app="$RUNNER_TEMP/HibpGuard-Device/Build/Products/Release-iphoneos/HibpGuard.app"
+          hibp_package="$RUNNER_TEMP/HibpGuard-Package"
+          hibp_export="$RUNNER_TEMP/HibpGuard-Export"
+
+          if [ ! -f "$hibp_app/Info.plist" ] || [ ! -f "$hibp_app/HibpGuard" ]; then
+            echo "::error::The iPhone app bundle was not created."
+            exit 1
+          fi
+
+          mkdir -p "$hibp_package/Payload" "$hibp_export"
+          ditto "$hibp_app" "$hibp_package/Payload/HibpGuard.app"
+          (
+            cd "$hibp_package"
+            zip -qry "$hibp_export/HibpGuard-unsigned.ipa" Payload
+          )
+          unzip -tq "$hibp_export/HibpGuard-unsigned.ipa"
+
+      - name: Upload downloadable IPA
+        id: ipa
+        uses: actions/upload-artifact@v7
+        with:
+          name: HibpGuard-unsigned-IPA
+          path: ${{ runner.temp }}/HibpGuard-Export/HibpGuard-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Add download link to Summary
+        shell: bash
+        env:
+          HIBP_ARTIFACT_URL: ${{ steps.ipa.outputs.artifact-url }}
+        run: |
+          printf '## HibpGuard для iPhone\n\n[Скачать архив с IPA](%s)\n\nВ архиве: `HibpGuard-unsigned.ipa`. Перед установкой нужна подпись приложения.\n' \
+            "$HIBP_ARTIFACT_URL" >> "$GITHUB_STEP_SUMMARY"

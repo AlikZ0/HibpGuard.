@@ -1,0 +1,34 @@
+name: HibpGuard iOS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build and test in iPhone simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -f "Tools/test_on_simulator.sh" ]; then
+            bash Tools/test_on_simulator.sh
+          elif [ -f "HibpGuard/Tools/test_on_simulator.sh" ]; then
+            bash HibpGuard/Tools/test_on_simulator.sh
+          else
+            echo "::error::Upload the complete HibpGuard project, including Tools/test_on_simulator.sh."
+            exit 1
+          fi

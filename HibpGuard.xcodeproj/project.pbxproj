@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		671B74AAEECBBE3A80476E68 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = AppContainer.swift;
+			sourceTree = "<group>";
+		};
+		65C168D662F05A87A0868A26 = {
+			isa = PBXBuildFile;
+			fileRef = 671B74AAEECBBE3A80476E68;
+		};
+		36D2215C368AA0E666F1B312 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HibpGuardApp.swift;
+			sourceTree = "<group>";
+		};
+		F82739BF058B97BAB21F6FDA = {
+			isa = PBXBuildFile;
+			fileRef = 36D2215C368AA0E666F1B312;
+		};
+		C37E95447A480EC0B1A49A98 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = RootView.swift;
+			sourceTree = "<group>";
+		};
+		E073ECBE19948D92C5D3D130 = {
+			isa = PBXBuildFile;
+			fileRef = C37E95447A480EC0B1A49A98;
+		};
+		312A3AB3F98141ED26EF9E76 = {
+			isa = PBXGroup;
+			children = (
+				671B74AAEECBBE3A80476E68,
+				36D2215C368AA0E666F1B312,
+				C37E95447A480EC0B1A49A98,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		69B26DBCD341E79A1C77578D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = ActionStep.swift;
+			sourceTree = "<group>";
+		};
+		36AF41DE048765D397988D1B = {
+			isa = PBXBuildFile;
+			fileRef = 69B26DBCD341E79A1C77578D;
+		};
+		525A89347D722F4229DFA827 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = AppError.swift;
+			sourceTree = "<group>";
+		};
+		86EBE7758BE1D35561A66B3F = {
+			isa = PBXBuildFile;
+			fileRef = 525A89347D722F4229DFA827;
+		};
+		07E065BB7C37E27BB3A4B4F8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Breach.swift;
+			sourceTree = "<group>";
+		};
+		5578528DE668C313F596E8EA = {
+			isa = PBXBuildFile;
+			fileRef = 07E065BB7C37E27BB3A4B4F8;
+		};
+		DF4363DF629B60334D82114D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CheckState.swift;
+			sourceTree = "<group>";
+		};
+		744904B599483EA78DAF5B59 = {
+			isa = PBXBuildFile;
+			fileRef = DF4363DF629B60334D82114D;
+		};
+		87B13D0BE6E13FDC8C87C10B = {
+			isa = PBXGroup;
+			children = (
+				69B26DBCD341E79A1C77578D,
+				525A89347D722F4229DFA827,
+				07E065BB7C37E27BB3A4B4F8,
+				DF4363DF629B60334D82114D,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E05070AD4C2AF58DAAB61CA7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CheckServices.swift;
+			sourceTree = "<group>";
+		};
+		AAFD5CE244938807665EBBFA = {
+			isa = PBXBuildFile;
+			fileRef = E05070AD4C2AF58DAAB61CA7;
+		};
+		923D6D882A262DA5469C539C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HIBPClient.swift;
+			sourceTree = "<group>";
+		};
+		1A5189F34419FECCFFB426FE = {
+			isa = PBXBuildFile;
+			fileRef = 923D6D882A262DA5469C539C;
+		};
+		CA3E7121972ECACD922A97FD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = HTTPTransport.swift;
+			sourceTree = "<group>";
+		};
+		CA4065DF28620ECD0CAFE2F6 = {
+			isa = PBXBuildFile;
+			fileRef = CA3E7121972ECACD922A97FD;
+		};
+		6B712A52CCB95ACCA70980FD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = PasswordFingerprint.swift;
+			sourceTree = "<group>";
+		};
+		DB48916396C5F31298E40792 = {
+			isa = PBXBuildFile;
+			fileRef = 6B712A52CCB95ACCA70980FD;
+		};
+		6632A33A5996BF71E35AEA6D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = PasswordRangeParser.swift;
+			sourceTree = "<group>";
+		};
+		9D611699304AAF01C024C4E7 = {
+			isa = PBXBuildFile;
+			fileRef = 6632A33A5996BF71E35AEA6D;
+		};
+		78A0779B8E8C71FFAF9A94FC = {
+			isa = PBXGroup;
+			children = (
+				E05070AD4C2AF58DAAB61CA7,
+				923D6D882A262DA5469C539C,
+				CA3E7121972ECACD922A97FD,
+				6B712A52CCB95ACCA70980FD,
+				6632A33A5996BF71E35AEA6D,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0BE1E20524BEF2DE74ACDF28 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = ActionPlanStore.swift;
+			sourceTree = "<group>";
+		};
+		320EC18A8ECE6AF5FD7F1C5B = {
+			isa = PBXBuildFile;
+			fileRef = 0BE1E20524BEF2DE74ACDF28;
+		};
+		6DC709585DCE2A935A9E97C9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = KeychainAPIKeyStore.swift;
+			sourceTree = "<group>";
+		};
+		2CC85B28DACDB5A7DB97B4BE = {
+			isa = PBXBuildFile;
+			fileRef = 6DC709585DCE2A935A9E97C9;
+		};
+		96C14E67C0E66511243099D6 = {
+			isa = PBXGroup;
+			children = (
+				0BE1E20524BEF2DE74ACDF28,
+				6DC709585DCE2A935A9E97C9,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		927106247631EE0B1F04BBAD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = EmailCheckViewModel.swift;
+			sourceTree = "<group>";
+		};
+		F75F98B77AC22BC6F306A1CF = {
+			isa = PBXBuildFile;
+			fileRef = 927106247631EE0B1F04BBAD;
+		};
+		2C517D431EF0512C05D4AA09 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = PasswordCheckViewModel.swift;
+			sourceTree = "<group>";
+		};
+		81724ACF686EEFEEBA8035C9 = {
+			isa = PBXBuildFile;
+			fileRef = 2C517D431EF0512C05D4AA09;
+		};
+		A619182DB926CF9141ADEFC1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SettingsViewModel.swift;
+			sourceTree = "<group>";
+		};
+		52AE083F28289365F0FA9251 = {
+			isa = PBXBuildFile;
+			fileRef = A619182DB926CF9141ADEFC1;
+		};
+		EA0573D3ABF6CB467430A57E = {
+			isa = PBXGroup;
+			children = (
+				927106247631EE0B1F04BBAD,
+				2C517D431EF0512C05D4AA09,
+				A619182DB926CF9141ADEFC1,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84B68D1C877BFC2C471C6EE7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = ActionPlanView.swift;
+			sourceTree = "<group>";
+		};
+		CA8F0E65BA32E095EACED21D = {
+			isa = PBXBuildFile;
+			fileRef = 84B68D1C877BFC2C471C6EE7;
+		};
+		915B0ED5BC6381B87E7211D8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = EmailCheckView.swift;
+			sourceTree = "<group>";
+		};
+		1F37F526C2948E2BA93879ED = {
+			isa = PBXBuildFile;
+			fileRef = 915B0ED5BC6381B87E7211D8;
+		};
+		8FE758F389908E2582382D7B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = PasswordCheckView.swift;
+			sourceTree = "<group>";
+		};
+		8D704A67E85FFA621F082E34 = {
+			isa = PBXBuildFile;
+			fileRef = 8FE758F389908E2582382D7B;
+		};
+		7027D69D64BDC23153332D5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SettingsView.swift;
+			sourceTree = "<group>";
+		};
+		B09C7EE6286C1AE5FA2F1FCD = {
+			isa = PBXBuildFile;
+			fileRef = 7027D69D64BDC23153332D5A;
+		};
+		6D3DACA1A360A9ED49F61E60 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SharedViews.swift;
+			sourceTree = "<group>";
+		};
+		BE199BA29872A439280A1864 = {
+			isa = PBXBuildFile;
+			fileRef = 6D3DACA1A360A9ED49F61E60;
+		};
+		B0DE74AD1F238B3E614FBDE5 = {
+			isa = PBXGroup;
+			children = (
+				84B68D1C877BFC2C471C6EE7,
+				915B0ED5BC6381B87E7211D8,
+				8FE758F389908E2582382D7B,
+				7027D69D64BDC23153332D5A,
+				6D3DACA1A360A9ED49F61E60,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		085ED06E573690BA3A56BC1E = {
+			isa = PBXGroup;
+			children = (
+				312A3AB3F98141ED26EF9E76,
+				87B13D0BE6E13FDC8C87C10B,
+				78A0779B8E8C71FFAF9A94FC,
+				96C14E67C0E66511243099D6,
+				EA0573D3ABF6CB467430A57E,
+				B0DE74AD1F238B3E614FBDE5,
+			);
+			path = HibpGuard;
+			sourceTree = "<group>";
+		};
+		D709B941B59E34C15873A3A2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = NetworkingTests.swift;
+			sourceTree = "<group>";
+		};
+		FCCD805AA9A7DDC182C40C74 = {
+			isa = PBXBuildFile;
+			fileRef = D709B941B59E34C15873A3A2;
+		};
+		0C129F5D387F8C9DFFB3C5D9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = PasswordPrivacyTests.swift;
+			sourceTree = "<group>";
+		};
+		92329B860EC74B75461B4FEC = {
+			isa = PBXBuildFile;
+			fileRef = 0C129F5D387F8C9DFFB3C5D9;
+		};
+		7277FF95E8A052B2D06D7F9F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = StorageTests.swift;
+			sourceTree = "<group>";
+		};
+		36EEA130F8CAD93CB0F86489 = {
+			isa = PBXBuildFile;
+			fileRef = 7277FF95E8A052B2D06D7F9F;
+		};
+		625D56836D965E77B363803F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = ViewModelTests.swift;
+			sourceTree = "<group>";
+		};
+		C68C955FDDC202E954FA2E2B = {
+			isa = PBXBuildFile;
+			fileRef = 625D56836D965E77B363803F;
+		};
+		D60409337774CCE94860379A = {
+			isa = PBXGroup;
+			children = (
+				D709B941B59E34C15873A3A2,
+				0C129F5D387F8C9DFFB3C5D9,
+				7277FF95E8A052B2D06D7F9F,
+				625D56836D965E77B363803F,
+			);
+			path = HibpGuardTests;
+			sourceTree = "<group>";
+		};
+		81F31879437340D5CD6ED968 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = HibpGuard.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70F09BF32F6D77A92FF191B4 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = HibpGuardTests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6F7199ED7B63CDA338A0FB82 = {
+			isa = PBXGroup;
+			children = (
+				81F31879437340D5CD6ED968,
+				70F09BF32F6D77A92FF191B4,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0596BBDB4DCC95D5D4F10C = {
+			isa = PBXGroup;
+			children = (
+				085ED06E573690BA3A56BC1E,
+				D60409337774CCE94860379A,
+				6F7199ED7B63CDA338A0FB82,
+			);
+			sourceTree = "<group>";
+		};
+		2B23A31EEC75B029432F2445 = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+		};
+		07CA1E69F6068DEA30A4DA6B = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+		};
+		049F51A9A527285FFFEDBC85 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B23A31EEC75B029432F2445,
+				07CA1E69F6068DEA30A4DA6B,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A89A760B35D1603CA070369 = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HibpGuard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HibpGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ENABLE_PREVIEWS = YES;
+			};
+		};
+		631477997D9EA745A12C2446 = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HibpGuard;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HibpGuard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ENABLE_PREVIEWS = YES;
+			};
+		};
+		AFB6A5C2113B3BB83B706DF2 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A89A760B35D1603CA070369,
+				631477997D9EA745A12C2446,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F24C9BBCF84E50C6BDB704A = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HibpGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HibpGuard.app/HibpGuard";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+			};
+		};
+		D60AD76B886E24621875D45F = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HibpGuardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HibpGuard.app/HibpGuard";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+			};
+		};
+		08F3128A235345DB6C4291ED = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F24C9BBCF84E50C6BDB704A,
+				D60AD76B886E24621875D45F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ACE7BC297BF23705D4E5F56 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C168D662F05A87A0868A26,
+				F82739BF058B97BAB21F6FDA,
+				E073ECBE19948D92C5D3D130,
+				36AF41DE048765D397988D1B,
+				86EBE7758BE1D35561A66B3F,
+				5578528DE668C313F596E8EA,
+				744904B599483EA78DAF5B59,
+				AAFD5CE244938807665EBBFA,
+				1A5189F34419FECCFFB426FE,
+				CA4065DF28620ECD0CAFE2F6,
+				DB48916396C5F31298E40792,
+				9D611699304AAF01C024C4E7,
+				320EC18A8ECE6AF5FD7F1C5B,
+				2CC85B28DACDB5A7DB97B4BE,
+				F75F98B77AC22BC6F306A1CF,
+				81724ACF686EEFEEBA8035C9,
+				52AE083F28289365F0FA9251,
+				CA8F0E65BA32E095EACED21D,
+				1F37F526C2948E2BA93879ED,
+				8D704A67E85FFA621F082E34,
+				B09C7EE6286C1AE5FA2F1FCD,
+				BE199BA29872A439280A1864,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13D58F750C9F7A867F986420 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB12F685944315C425ABFF58 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2F315977E833CC2ECF764D = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCCD805AA9A7DDC182C40C74,
+				92329B860EC74B75461B4FEC,
+				36EEA130F8CAD93CB0F86489,
+				C68C955FDDC202E954FA2E2B,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09701C1ED473FC02B8A57D80 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41EB5A06123FA83769D9447E = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8619E39B688A33CB92F66F7B = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244210E48437B6556980A702;
+			proxyType = 1;
+			remoteGlobalIDString = 8C1A045E96B998B40533C7FF;
+			remoteInfo = HibpGuard;
+		};
+		B1F33F0DF5D562F7B2106E58 = {
+			isa = PBXTargetDependency;
+			target = 8C1A045E96B998B40533C7FF;
+			targetProxy = 8619E39B688A33CB92F66F7B;
+		};
+		8C1A045E96B998B40533C7FF = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB6A5C2113B3BB83B706DF2;
+			buildPhases = (
+				6ACE7BC297BF23705D4E5F56,
+				13D58F750C9F7A867F986420,
+				EB12F685944315C425ABFF58,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HibpGuard;
+			productName = HibpGuard;
+			productReference = 81F31879437340D5CD6ED968;
+			productType = "com.apple.product-type.application";
+		};
+		2ADDEE89B29C55E11126D89F = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08F3128A235345DB6C4291ED;
+			buildPhases = (
+				DE2F315977E833CC2ECF764D,
+				09701C1ED473FC02B8A57D80,
+				41EB5A06123FA83769D9447E,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1F33F0DF5D562F7B2106E58,
+			);
+			name = HibpGuardTests;
+			productName = HibpGuardTests;
+			productReference = 70F09BF32F6D77A92FF191B4;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		244210E48437B6556980A702 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					8C1A045E96B998B40533C7FF = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					2ADDEE89B29C55E11126D89F = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 8C1A045E96B998B40533C7FF;
+					};
+				};
+			};
+			buildConfigurationList = 049F51A9A527285FFFEDBC85;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ru;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ru,
+				en,
+				Base,
+			);
+			mainGroup = AA0596BBDB4DCC95D5D4F10C;
+			productRefGroup = 6F7199ED7B63CDA338A0FB82;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C1A045E96B998B40533C7FF,
+				2ADDEE89B29C55E11126D89F,
+			);
+		};
+	};
+	rootObject = 244210E48437B6556980A702;
+}
